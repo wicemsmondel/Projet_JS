@@ -1,8 +1,8 @@
-var http = require('http');
+const http = require('http');
 
-var url = require('url');
+const url = require('url');
 
-var server = http.createServer("/", function(req, res) {
+let server = http.createServer("/", function(req, res) {
     var mypath = url.parse(req.url).pathname;
     if (mypath == "/") {
         res.writeHead(200, { 'Content-Type': 'text/html' });
@@ -15,8 +15,9 @@ var server = http.createServer("/", function(req, res) {
         res.write('<h1>Deuxieme url</h1>')
     } else {
         res.writeHead(404, { 'Content-Type': 'text/html' });
-        res.write('<h1>ERREUR 404</h1>');
+        res.write('<h1>ERREUR 404</h1><h1>Cette page n\'existe pas</h1>');
     }
     res.end();
 });
 server.listen(3000);
+console.log("Connected! Listening on port : 3000");
