@@ -1,4 +1,6 @@
+//Declaration of the function with two parameters
 function percent(a, b) {
-    return a * b
+    console.log(a * b)
 }
-console.log(percent(6, 3))
+//Call of the function with two arguments
+percent(6, 3)
