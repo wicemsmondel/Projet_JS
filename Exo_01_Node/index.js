@@ -15,7 +15,7 @@ var server = http.createServer("/", function(req, res) {
         res.write('<h1>Deuxieme url</h1>')
     } else {
         res.writeHead(404, { 'Content-Type': 'text/html' });
-        res.write('<h1>ERREUR 404</h1>');
+        res.write('<h1>ERREUR 404 Cette page n\'existe pas</h1>');
     }
     res.end();
 });
